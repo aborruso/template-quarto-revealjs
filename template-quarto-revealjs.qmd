@@ -184,7 +184,7 @@ Esempio:
 ## Immagine di sfondo ripetuta {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
 ```
 
-## {background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PANO_20140615_104639.jpg/1280px-PANO_20140615_104639.jpg" .center .no-chrome}
+## {background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PANO_20140615_104639.jpg/1280px-PANO_20140615_104639.jpg"}
 
 ```markdown
 {background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PANO_20140615_104639.jpg/1280px-PANO_20140615_104639.jpg" }
