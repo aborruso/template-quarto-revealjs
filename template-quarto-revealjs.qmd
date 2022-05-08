@@ -1,0 +1,195 @@
+---
+title: "Una presentazione con Quarto"
+subtitle: "Belle presentazioni basate su Reveal.js"
+format:
+  revealjs:
+    slide-number: true
+    preview-links: auto
+    logo: imgs/logo.png
+    footer: <https://quarto.org>
+    theme: [dark, style.scss]
+    auto-stretch: false
+    navigation-mode: vertical
+    center-title-slide: false
+    chalkboard: true
+    lang: it
+    date: 2022-05-08
+    author: "Guido La Vespa"
+    institute: "Università degli Studi di Casa Mia"
+resources:
+  - demo.pdf
+---
+
+# Ciao mondo
+
+Questa è una presentazione scritta in Quarto e basata su [Reveal.js](https://revealjs.com/).
+
+Di base si scrive in markdown.
+
+# Codice
+
+```bash
+for i in {0..10};do
+  echo "$i";
+done
+```
+
+# Codice: evidenziare linee
+
+- scegliere la linee da sottlineare;
+- anche in **modo progressivo**.
+
+```{.bash code-line-numbers="1|2|3"}
+for i in {0..10};do
+  echo "$i";
+done
+```
+
+Per farlo aggiungere, accanto ai 3 `` ` ``, tra `{}` il parametro `code-line-numbers`. Qui sotto il codice markdown che produce l'output di sopra.
+
+````markdown
+```{.bash code-line-numbers="1|2|3"}
+for i in {0..10};do
+  echo "$i";
+done
+```
+````
+
+# Layout a colonne {.smaller}
+
+::: {.columns style="margin-top: 120px;"}
+
+::: {.column width="48%" }
+#### Colonna 1
+Gubergren ipsum lorem duo et stet kasd odio erat sed sanctus gubergren et dolore adipiscing aliquyam nulla diam ipsum. No stet diam justo clita dignissim lorem amet erat lorem labore facilisi ipsum. Ea dolore vulputate dolore et elitr. Ea minim vel est.
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%" }
+#### Colonna 2
+Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takimata erat facilisi consequat dolore. Invidunt stet velit sit sanctus stet eu vero ut est rebum.
+:::
+:::
+
+# Layout a colonne (codice)
+
+````markdown
+::: columns
+
+::: {.column width="48%"}
+#### Colonna 1
+Gubergren ipsum lorem duo et stet kasd odio erat sed sanctus gubergren et dolore adipiscing aliquyam nulla diam ipsum. No stet diam justo clita dignissim lorem amet erat lorem labore facilisi ipsum. Ea dolore vulputate dolore et elitr. Ea minim vel est.
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+#### Colonna 2
+Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takimata erat facilisi consequat dolore. Invidunt stet velit sit sanctus stet eu vero ut est rebum.
+:::
+:::
+````
+
+:::{.callout-warning}
+## Nota bene
+Con il _layout_ a colonne e presentazioni con slide in verticale, ci sono però dei [problemi](https://github.com/quarto-dev/quarto-cli/issues/824).
+:::
+
+
+# Elenchi puntati incrementali
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+# Elenchi puntati incrementali (codice)
+
+```markdown
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+```
+
+# Nota nel piede
+
+Si può inserire una nota a piè di pagina come quella di sotto, usando questa sintassi:
+
+```markdown
+::: footer
+Per approfondire: [logo e piè di pagina](https://quarto.org/docs/presentations/revealjs/index.html#footer-logo=)
+:::
+```
+
+::: footer
+Per approfondire: [logo e piè di pagina](https://quarto.org/docs/presentations/revealjs/index.html#footer-logo=)
+:::
+
+
+# Immagini
+
+![](imgs/PANO_20140615_104639.jpg)
+
+# Immagini (forzare adattamento larghezza)
+
+Per forzare l'adattamento dell'immagine alla larghezza aggiungere `{.r-stretch}`, come sotto:
+
+```markdown
+![](imgs/PANO_20140615_104639.jpg){.r-stretch}
+```
+
+![](imgs/PANO_20140615_104639.jpg){.r-stretch}
+
+# Slide centrata verticalmente {.center}
+
+Aggiungere `{.center}` accanto al titolo
+
+```markdown
+# Slide centrata verticalmente {.center}
+```
+
+# Sezione verticale di slide
+
+Se scorri verso il basso, hai delle slide in verticale.
+
+## Lorem ipsum 1
+
+Hello
+
+## Lorem ipsum 2
+
+World
+
+# Lavorare sullo sfondo {.center}
+
+## Colore di sfondo {background-color="aquamarine"}
+
+Basta aggiungere accanto al titolo il parametro `background-color`.
+
+Esempio:
+
+```markdown
+# Cambiare il colore di sfondo {background-color="aquamarine"}
+```
+
+## Immagine di sfondo ripetuta {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
+
+```markdown
+## Immagine di sfondo ripetuta {background-color="black" background-image="https://placekitten.com/100/100" background-size="100px" background-repeat="repeat"}
+```
+
+## {background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PANO_20140615_104639.jpg/1280px-PANO_20140615_104639.jpg" .center .no-chrome}
+
+```markdown
+{background-color="black" background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/PANO_20140615_104639.jpg/1280px-PANO_20140615_104639.jpg" }
+```
+
+# Slide {.no-chrome}
+
+Hide please.
