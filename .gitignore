@@ -17,3 +17,5 @@ Thumbs.db
 .bak
 
 tmp*
+template-quarto-revealjs_files/*
+template-quarto-revealjs.html
