@@ -55,23 +55,33 @@ done
 ```
 ````
 
-# Layout a colonne {.smaller}
+# Layout a colonne
 
-::: {.columns style="margin-top: 120px;"}
+::: {.columns}
 
-::: {.column width="48%" }
-#### Colonna 1
+:::: {.column width="48%" }
+
+<h3>Colonna 1</h3>
+
 Gubergren ipsum lorem duo et stet kasd odio erat sed sanctus gubergren et dolore adipiscing aliquyam nulla diam ipsum. No stet diam justo clita dignissim lorem amet erat lorem labore facilisi ipsum. Ea dolore vulputate dolore et elitr. Ea minim vel est.
-:::
+::::
 
-::: {.column width="4%"}
-:::
+:::: {.column width="4%"}
 
-::: {.column width="48%" }
-#### Colonna 2
+::::
+
+:::: {.column width="48%" }
+
+<h3>Colonna 2</h3>
+
 Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takimata erat facilisi consequat dolore. Invidunt stet velit sit sanctus stet eu vero ut est rebum.
+::::
+
 :::
-:::
+
+
+
+
 
 # Layout a colonne (codice)
 
@@ -79,7 +89,8 @@ Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takima
 ::: columns
 
 ::: {.column width="48%"}
-#### Colonna 1
+<h3>Colonna 1</h3>
+
 Gubergren ipsum lorem duo et stet kasd odio erat sed sanctus gubergren et dolore adipiscing aliquyam nulla diam ipsum. No stet diam justo clita dignissim lorem amet erat lorem labore facilisi ipsum. Ea dolore vulputate dolore et elitr. Ea minim vel est.
 :::
 
@@ -87,7 +98,8 @@ Gubergren ipsum lorem duo et stet kasd odio erat sed sanctus gubergren et dolore
 :::
 
 ::: {.column width="48%"}
-#### Colonna 2
+<h3>Colonna 2</h3>
+
 Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takimata erat facilisi consequat dolore. Invidunt stet velit sit sanctus stet eu vero ut est rebum.
 :::
 :::
@@ -95,7 +107,7 @@ Sed takimata sea nonummy labore takimata elit et et duis magna. Et sed et takima
 
 :::{.callout-warning}
 ## Nota bene
-Con il _layout_ a colonne e presentazioni con slide in verticale, ci sono però dei [problemi](https://github.com/quarto-dev/quarto-cli/issues/824).
+Con il _layout_ a colonne e presentazioni con slide in verticale, ci sono però dei [problemi](https://github.com/quarto-dev/quarto-cli/issues/824). **Non bisogna usare titoli con `#`**, ma solo con codice HTML.
 :::
 
 
